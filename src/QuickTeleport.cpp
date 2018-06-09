@@ -11,6 +11,7 @@ public:
     {
         static std::vector<ChatCommand> TeleportTable =
         {
+
             { "home", SEC_PLAYER, false, &HandleHomeTeleportCommand, "" },
             { "arena", SEC_PLAYER, false, &HandleVIPMallTeleportCommand, ""}
 
