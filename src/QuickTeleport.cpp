@@ -5,7 +5,7 @@
 class QuickTeleport : public CommandScript{
 public:
 
-    QuickTeleport() : PlayerScript("QuickTeleport") { }
+    QuickTeleport() : CommandScript("QuickTeleport") { }
 
     std::vector<ChatCommand> GetCommands() const override
     {
@@ -13,7 +13,7 @@ public:
         {
 
             { "home", SEC_PLAYER, false, &HandleHomeTeleportCommand, "" },
-            { "arena", SEC_PLAYER, false, &HandleVIPMallTeleportCommand, ""}
+            { "arena", SEC_PLAYER, false, &HandleArenaTeleportCommand, ""}
 
         };
         return TeleportTable;
