@@ -1,7 +1,11 @@
 #include "ScriptMgr.h"
 #include "Player.h"
 #include "Configuration/Config.h"
-
+#include "Creature.h"
+#include "AccountMgr.h"
+#include "Define.h"
+#include "GossipDef.h"
+#include "DataMap.h"
 class QuickTeleport : public CommandScript{
 public:
 
