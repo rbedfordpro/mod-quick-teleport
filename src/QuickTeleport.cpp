@@ -6,6 +6,8 @@
 #include "Define.h"
 #include "GossipDef.h"
 #include "DataMap.h"
+
+
 class QuickTeleport : public CommandScript{
 public:
 
@@ -23,7 +25,7 @@ public:
         return TeleportTable;
     }
 
-    static bool HandleHomeTeleportCommand(ChatHandler* handler, char const* args)
+    static bool HandleHomeTeleportCommand(ChatHandler* handler, char const* /*args*/ )
     {
         Player* me = handler->GetSession()->GetPlayer();
         std::string home = sConfigMgr->GetStringDefault("QuickTeleport.homeLocation", "");
@@ -57,8 +59,9 @@ public:
         return true;
     }
 
-    static bool HandleArenaTeleportCommand(ChatHandler* handler, char const* args)
+    static bool HandleArenaTeleportCommand(ChatHandler* handler, char const* /*args*/)
     {
+        
         bool enabled = sConfigMgr->GetBoolDefault("QuickTeleport.enabled", false);
         std::string arena = sConfigMgr->GetStringDefault("QuickTeleport.arenaLocation", "");
 
